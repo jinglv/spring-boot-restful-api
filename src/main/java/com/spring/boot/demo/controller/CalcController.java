@@ -6,17 +6,20 @@ import com.spring.boot.demo.service.CalcService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 /**
  * @author jingLv
  * @date 2020/10/16
  */
+@Validated
 @JwtSupport
 @RestController
 @Slf4j
@@ -37,8 +40,8 @@ public class CalcController {
             httpMethod = "GET",
             response = List.class)
     @GetMapping(value = "add")
-    public ApiResponse<Object> add(@RequestParam Integer a, @RequestParam Integer b) {
-        return ApiResponse.ofSuccess(this.calcService.add(a, b));
+    public ApiResponse<Object> add(@NotNull(message = "number1不能为空") @RequestParam Integer number1, @NotNull(message = "number2不能为空") @RequestParam Integer number2) {
+        return ApiResponse.ofSuccess(this.calcService.add(number1, number2));
     }
 
     @ApiOperation(value = "计算算法减法",
@@ -48,8 +51,8 @@ public class CalcController {
             httpMethod = "GET",
             response = List.class)
     @GetMapping(value = "sub")
-    public ApiResponse<Object> sub(@RequestParam Integer a, @RequestParam Integer b) {
-        return ApiResponse.ofSuccess(this.calcService.sub(a, b));
+    public ApiResponse<Object> sub(@NotNull(message = "number1不能为空") @RequestParam Integer number1, @NotNull(message = "number2不能为空") @RequestParam Integer number2) {
+        return ApiResponse.ofSuccess(this.calcService.sub(number1, number2));
     }
 
     @ApiOperation(value = "计算算法乘法",
@@ -59,8 +62,8 @@ public class CalcController {
             httpMethod = "GET",
             response = List.class)
     @GetMapping(value = "mul")
-    public ApiResponse<Object> mul(@RequestParam Integer a, @RequestParam Integer b) {
-        return ApiResponse.ofSuccess(this.calcService.mul(a, b));
+    public ApiResponse<Object> mul(@NotNull(message = "number1不能为空") @RequestParam Integer number1, @NotNull(message = "number2不能为空") @RequestParam Integer number2) {
+        return ApiResponse.ofSuccess(this.calcService.mul(number1, number2));
     }
 
     @ApiOperation(value = "计算算法除法",
@@ -70,7 +73,7 @@ public class CalcController {
             httpMethod = "GET",
             response = List.class)
     @GetMapping(value = "div")
-    public ApiResponse<Object> div(@RequestParam Integer a, @RequestParam Integer b) {
-        return ApiResponse.ofSuccess(this.calcService.div(a, b));
+    public ApiResponse<Object> div(@NotNull(message = "number1不能为空") @RequestParam Integer number1, @NotNull(message = "number2不能为空") @RequestParam Integer number2) {
+        return ApiResponse.ofSuccess(this.calcService.div(number1, number2));
     }
 }
