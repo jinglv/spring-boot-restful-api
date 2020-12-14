@@ -3,6 +3,7 @@ package com.spring.boot.demo.entity;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -13,7 +14,11 @@ import java.util.List;
  */
 @Data
 @Accessors(chain = true)
-public class UserInfoEntity {
+public class UserInfoEntity implements Serializable {
+    /**
+     * serialVersionUID
+     */
+    private static final long serialVersionUID = 5830519218561458583L;
     /**
      * 用户编号
      */

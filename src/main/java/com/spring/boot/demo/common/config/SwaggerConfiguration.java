@@ -6,7 +6,8 @@ import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
-import springfox.documentation.service.*;
+import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -45,7 +46,7 @@ public class SwaggerConfiguration {
         return new ApiInfoBuilder()
                 .title("Spring Boot rest Api接口示例")
                 .description("接口文档示例")
-                .termsOfServiceUrl("http://xxx:8888/doc.html")
+                .termsOfServiceUrl("http://localhost:8888/doc.html")
                 .contact(new Contact("Jing", null, "xxxx@email.com"))
                 .version("1.0")
                 .build();

@@ -136,3 +136,7 @@ Dao层是对于数据库进行操作，如果在测试时连接数据库，对�
 [knife4j官方网站](https://doc.xiaominfo.com/guide/useful.html#java开发)
 
 启动服务，访问地址：http://ip:port/doc.html
+
+## 使用TraceId实现日志跟踪
+1. 建立一个过滤器，在过滤器中给线程设置TraceId
+2. 将日志配置文件进行修改，把TraceId打印到日志中

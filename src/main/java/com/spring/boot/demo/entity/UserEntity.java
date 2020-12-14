@@ -4,13 +4,18 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 /**
  * @author jinglv
  */
 @Data
 @Accessors(chain = true)
-public class UserEntity {
+public class UserEntity implements Serializable {
+    /**
+     * serialVersionUID
+     */
+    private static final long serialVersionUID = -6537536297353335957L;
     /**
      * 主键
      */
