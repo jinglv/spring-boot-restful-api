@@ -1,6 +1,6 @@
 package com.spring.boot.demo.controller;
 
-import com.spring.boot.demo.BaseTest;
+import com.spring.boot.demo.BaseCase;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ import org.springframework.web.context.WebApplicationContext;
  * @author jingLv
  * @date 2020/11/16
  */
-class UserControllerTest extends BaseTest {
+class UserControllerTest extends BaseCase {
 
     @Autowired
     private WebApplicationContext webApplicationContext;

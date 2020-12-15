@@ -1,6 +1,6 @@
 package com.spring.boot.demo.service.impl;
 
-import com.spring.boot.demo.BaseTest;
+import com.spring.boot.demo.BaseCase;
 import com.spring.boot.demo.entity.UserInfoEntity;
 import com.spring.boot.demo.service.UserInfoService;
 import org.junit.jupiter.api.Test;
@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * @author jingLv
  * @date 2020/11/16
  */
-class UserInfoServiceImplTest extends BaseTest {
+class UserInfoServiceImplTest extends BaseCase {
 
     @Autowired
     private UserInfoService userInfoService;

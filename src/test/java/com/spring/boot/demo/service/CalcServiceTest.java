@@ -1,6 +1,6 @@
 package com.spring.boot.demo.service;
 
-import com.spring.boot.demo.BaseTest;
+import com.spring.boot.demo.BaseCase;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * @author jingLv
  * @date 2020/10/16
  */
-class CalcServiceTest extends BaseTest {
+class CalcServiceTest extends BaseCase {
 
     @Autowired
     private CalcService calcService;

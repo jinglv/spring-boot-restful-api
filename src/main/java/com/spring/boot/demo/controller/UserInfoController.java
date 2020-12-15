@@ -1,5 +1,6 @@
 package com.spring.boot.demo.controller;
 
+import com.spring.boot.demo.annotation.JwtSupport;
 import com.spring.boot.demo.common.response.ApiResponse;
 import com.spring.boot.demo.entity.UserInfoEntity;
 import com.spring.boot.demo.service.UserInfoService;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
  * @author jingLv
  * @date 2020/11/16
  */
+@JwtSupport
 @RestController
 @ResponseBody
 @Slf4j
