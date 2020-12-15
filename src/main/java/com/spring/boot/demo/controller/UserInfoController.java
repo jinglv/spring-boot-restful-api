@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @ResponseBody
 @Slf4j
-@RequestMapping("/v1/user")
+@RequestMapping("/v1/info")
 @Api(tags = "用户信息相关接口", value = "UserController", protocols = "JSON")
 public class UserInfoController {
 
