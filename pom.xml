@@ -101,38 +101,38 @@
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.5</version>
                 <!--这里的execution ,每一个执行的goal,对应的id必须是唯一的-->
-                <executions>
-                    <execution>
-                        <id>prepare-agent</id>
-                        <goals>
-                            <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-                    <!--这个check:对代码进行检测，控制项目构建成功还是失败-->
-                    <execution>
-                        <id>check</id>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                    <!--report:对代码进行检测，然后生成index.html在 target/site/index.html中可以查看检测的详细结果-->
-                    <execution>
-                        <id>report</id>
-                        <phase>prepare-package</phase>
-                    </execution>
-                    <execution>
-                        <id>post-unit-test</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                        <!--report:对代码进行检测，然后生成index.html在 target/site/index.html中可以查看检测的详细结果, 也可指定jacoco报告输出目录，报告在target/jacoco-ut/index.html查看-->
-                        <configuration>
-                            <dataFile>target/jacoco.exec</dataFile>
-                            <outputDirectory>target/jacoco-ut</outputDirectory>
-                        </configuration>
-                    </execution>
-                </executions>
+                <!--                <executions>-->
+                <!--                    <execution>-->
+                <!--                        <id>prepare-agent</id>-->
+                <!--                        <goals>-->
+                <!--                            <goal>prepare-agent</goal>-->
+                <!--                        </goals>-->
+                <!--                    </execution>-->
+                <!--                    &lt;!&ndash;这个check:对代码进行检测，控制项目构建成功还是失败&ndash;&gt;-->
+                <!--                    <execution>-->
+                <!--                        <id>check</id>-->
+                <!--                        <goals>-->
+                <!--                            <goal>check</goal>-->
+                <!--                        </goals>-->
+                <!--                    </execution>-->
+                <!--                    &lt;!&ndash;report:对代码进行检测，然后生成index.html在 target/site/index.html中可以查看检测的详细结果&ndash;&gt;-->
+                <!--                    <execution>-->
+                <!--                        <id>report</id>-->
+                <!--                        <phase>prepare-package</phase>-->
+                <!--                    </execution>-->
+                <!--                    <execution>-->
+                <!--                        <id>post-unit-test</id>-->
+                <!--                        <phase>test</phase>-->
+                <!--                        <goals>-->
+                <!--                            <goal>report</goal>-->
+                <!--                        </goals>-->
+                <!--                        &lt;!&ndash;report:对代码进行检测，然后生成index.html在 target/site/index.html中可以查看检测的详细结果, 也可指定jacoco报告输出目录，报告在target/jacoco-ut/index.html查看&ndash;&gt;-->
+                <!--                        <configuration>-->
+                <!--                            <dataFile>target/jacoco.exec</dataFile>-->
+                <!--                            <outputDirectory>target/jacoco-ut</outputDirectory>-->
+                <!--                        </configuration>-->
+                <!--                    </execution>-->
+                <!--                </executions>-->
                 <!-- Configuration 里面写配置信息 -->
                 <configuration>
                     <!--排除不需要的覆盖的文件-->
