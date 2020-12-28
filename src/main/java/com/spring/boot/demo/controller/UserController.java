@@ -1,6 +1,6 @@
 package com.spring.boot.demo.controller;
 
-import com.spring.boot.demo.common.exception.CustomException;
+import com.spring.boot.demo.common.response.ApiCodeEnum;
 import com.spring.boot.demo.common.response.ApiResponse;
 import com.spring.boot.demo.common.utils.JwtUtils;
 import com.spring.boot.demo.entity.UserEntity;
@@ -58,8 +58,7 @@ public class UserController {
             info.put("token", token);
             return ApiResponse.ofSuccess(info);
         } catch (Exception e) {
-            e.printStackTrace();
-            return ApiResponse.ofException(new CustomException());
+            return ApiResponse.ofErrorCode(ApiCodeEnum.FAIL, e.getMessage());
         }
     }
 }

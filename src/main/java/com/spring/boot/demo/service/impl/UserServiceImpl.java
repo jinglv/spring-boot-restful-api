@@ -14,12 +14,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserEntity login(UserEntity userEntity) {
+        String userName = "xiaohong";
+        String password = "123123";
         // 模拟根据接收的用户名和密码查询数据库，在此写死用户名和密码
-        UserEntity user = new UserEntity();
-        user.setUsername("xiaohong").setPassword("123123");
-        if (user != null) {
-            return user;
+        if (userEntity.getUsername().equals(userName) && userEntity.getPassword().equals(password)) {
+            UserEntity user = new UserEntity();
+            return user.setId("1").setUsername(userName).setPassword(password);
         }
-        throw new CustomException("用户不存在--");
+        throw new CustomException("用户不存在");
     }
 }
