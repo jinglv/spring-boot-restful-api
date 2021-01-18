@@ -80,7 +80,7 @@ GET | /user/{userId} | 查询指定的用户信息
 GET | /user/{userId}/friend/{friendId} | 查询指定用户的好友信息
 POST | /user | 保存用户信息
 PUT | /user/{userId} | 更新用户信息
-DELETE | /user/{userId} | 删除用户信息
+DELETE | /user/{userId} | 删除用户信息 |
 
 put方法主要是用来更新整个资源的，而patch方法主要表示更新部分字段。
 
