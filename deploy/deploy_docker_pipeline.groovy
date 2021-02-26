@@ -82,7 +82,7 @@ pipeline {
                 sh '''
                     cd ${WORKSPACE}/docker
                     rm -f spring-boot-restful-api-0.0.1-SNAPSHOT.jar
-                    cp ${WORKSPACE}/web/target/spring-boot-restful-api-0.0.1-SNAPSHOT.jar .
+                    cp ${WORKSPACE}/target/spring-boot-restful-api-0.0.1-SNAPSHOT.jar .
                     docker build -t $docker_image_name .
                 '''
             }
