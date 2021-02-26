@@ -16,7 +16,7 @@ pipeline {
     stages {
         stage('检出代码') {
             steps {
-                git credentialsId: cred_id, url: 'https://github.com/jinglv/spring-boot-restful-api.git', branch: '$params.branch'
+                git credentialsId: cred_id, url: 'https://github.com/jinglv/spring-boot-restful-api.git', branch: "$params.branch"
             }
         }
 
