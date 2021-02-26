@@ -5,8 +5,8 @@ pipeline {
 
     environment {
         cred_id = '64129bbc-8486-40e0-8e13-3bdc2172052a'
-        docker_image_name = 'restfulApi'
-        docker_container_name = 'iRestfulApi'
+        docker_image_name = 'restful_api'
+        docker_container_name = 'irestful_api'
     }
 
     parameters {
