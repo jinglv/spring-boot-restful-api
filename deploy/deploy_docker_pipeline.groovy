@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'main'
+        label 'master'
     }
 
     environment {
@@ -9,7 +9,7 @@ pipeline {
     }
 
     parameters {
-        string(name: 'branch', defaultValue: 'master', description: 'Git branch')
+        string(name: 'branch', defaultValue: 'main', description: 'Git branch')
     }
 
     stages {
