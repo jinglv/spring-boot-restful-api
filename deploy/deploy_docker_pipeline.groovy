@@ -90,7 +90,7 @@ pipeline {
         stage('启动新Docker实例') {
             steps {
                 sh '''
-                    docker run -d --name $docker_container_name -p 8981:8980 $docker_image_name
+                    docker run -d --name $docker_container_name -p 8988:8988 $docker_image_name
                 '''
             }
         }

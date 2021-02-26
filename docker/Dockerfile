@@ -5,4 +5,4 @@ ENV LANG C.UTF-8
 VOLUME /tmp
 ADD spring-boot-restful-api-0.0.1-SNAPSHOT.jar restful.jar
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/restful.jar"]
-EXPOSE 8980
+EXPOSE 8988
