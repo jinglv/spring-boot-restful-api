@@ -2,6 +2,7 @@ package com.spring.boot.demo.controller;
 
 import com.spring.boot.demo.BaseCase;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
@@ -30,7 +31,7 @@ class UserControllerTest extends BaseCase {
     }
 
 
-    // @Test
+    @Test
     void login() throws Exception {
         MvcResult mvcResult = mockMvc.perform(
                 // 构造一个get请求
