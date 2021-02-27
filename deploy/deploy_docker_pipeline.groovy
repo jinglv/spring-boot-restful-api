@@ -42,17 +42,6 @@ pipeline {
             }
         }
 
-//        stage('Maven编译打包') {
-//            steps {
-//                sh '''
-//                    . ~/.bash_profile
-//
-//                    cd ${WORKSPACE}
-//                    mvn clean install -Dmaven.test.skip=true
-//                '''
-//            }
-//        }
-
         stage('停止 / 删除 现有Docker Container/Image ') {
             steps {
                 script {
@@ -95,5 +84,27 @@ pipeline {
                 '''
             }
         }
+
+//        post {
+//            always {
+//                script {
+//                    println "Do some actions when always need."
+//                }
+//            }
+//            failure {
+//                script {
+//                    println "Do some actions when build failed."
+//                }
+//            }
+//            success {
+//                script {
+//                    println "Here we kickoff run job B"
+//                    jobB = build job: 'ProjectB-pipeline-demo', propagate: false, wait: true, parameters: [
+//                            string(name: 'INPUT_JSON', value: "${json_file}")
+//                    ]
+//                    println jobB.getResult()
+//                }
+//            }
+//        }
     }
 }
