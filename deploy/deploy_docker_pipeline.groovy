@@ -85,26 +85,24 @@ pipeline {
             }
         }
 
-//        post {
-//            always {
-//                script {
-//                    println "Do some actions when always need."
-//                }
-//            }
-//            failure {
-//                script {
-//                    println "Do some actions when build failed."
-//                }
-//            }
-//            success {
-//                script {
-//                    println "Here we kickoff run job B"
-//                    jobB = build job: 'ProjectB-pipeline-demo', propagate: false, wait: true, parameters: [
-//                            string(name: 'INPUT_JSON', value: "${json_file}")
-//                    ]
-//                    println jobB.getResult()
-//                }
-//            }
-//        }
+        post {
+            always {
+                script {
+                    println "Do some actions when always need."
+                }
+            }
+            failure {
+                script {
+                    println "Do some actions when build failed."
+                }
+            }
+            success {
+                script {
+                    println "Here we kickoff run job SpringBoot-Restful-Api-Test-Pipeline"
+                    job_run_result = build job: 'SpringBoot-Restful-Api-Test-Pipeline', propagate: false, wait: true
+                    println job_run_result.getResult()
+                }
+            }
+        }
     }
 }
