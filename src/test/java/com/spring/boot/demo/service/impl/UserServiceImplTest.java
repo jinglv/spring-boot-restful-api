@@ -24,15 +24,4 @@ class UserServiceImplTest extends BaseCase {
         UserEntity login = userService.login(userEntity);
         assertAll("result assertion", () -> assertEquals(login.getUsername(), userEntity.getUsername()));
     }
-
-//    @Test
-//    void loginFail() {
-//        UserEntity userEntity = new UserEntity();
-//        // 用户名不存在
-//        userEntity.setUsername("xiaohei").setPassword("123123");
-//        Throwable exception = assertThrows(CustomException.class, () -> {
-//            UserEntity login = userService.login(userEntity);
-//        });
-//        assertEquals("用户不存在--", exception.getMessage());
-//    }
 }
