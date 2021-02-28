@@ -4,7 +4,7 @@ pipeline {
     }
 
     environment {
-        cred_id = '64129bbc-8486-40e0-8e13-3bdc2172052a'
+        cred_id = 'd7f10e03-1795-4e5f-805a-65c5487f4dfc'
         docker_image_name = 'restful_api'
         docker_container_name = 'irestful_api'
     }
@@ -16,7 +16,7 @@ pipeline {
     stages {
         stage('检出代码') {
             steps {
-                git credentialsId: cred_id, url: 'https://github.com/jinglv/spring-boot-restful-api.git', branch: "$params.branch"
+                git credentialsId: cred_id, url: 'https://gitee.com/jeanlv/spring-boot-restful-api.git', branch: "$params.branch"
             }
         }
 
@@ -85,7 +85,7 @@ pipeline {
             }
         }
     }
-    
+
     post {
         always {
             script {
