@@ -37,7 +37,7 @@ pipeline {
                     . ~/.bash_profile 
                     
                     cd ${WORKSPACE}
-                    mvn sonar:sonar -Dsonar.projectKey=spring-boot-restful-api -Dsonar.host.url=http://8.140.112.109:9000/ -Dsonar.login=ccfc60220c447803b94b827ea6a16ae245399ef1 -Dsonar.branch.name=${branch}
+                    mvn sonar:sonar -Dsonar.projectKey=spring-boot-restful-api -Dsonar.host.url=http://60.205.228.49:9000/ -Dsonar.login=053ed1077e82a2bb36eebf619d24d75b8c5738b9 -Dsonar.branch.name=${branch}
                 '''
             }
         }
