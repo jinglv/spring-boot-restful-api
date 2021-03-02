@@ -45,6 +45,8 @@ pipeline {
                 junit '**/target/surefire-reports/*.xml'
                 // 配置单元测试覆盖率要求，未达到要求pipeline将会fail,code coverage.LineCoverage>20%.
                 jacoco changeBuildStatus: true, maximumLineCoverage: "${lineCoverage}"
+                // Jacoco覆盖率报告
+                jacoco execPattern: '**/target/**.exec'
             }
         }
 
