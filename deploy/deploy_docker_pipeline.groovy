@@ -12,6 +12,7 @@ pipeline {
     parameters {
         string(name: 'branch', defaultValue: 'main', description: 'Git branch')
         string(name: 'pomPath', defaultValue: 'pom.xml', description: 'pom.xml的相对路径')
+        string(name: 'lineCoverage', defaultValue: '20', description: '单元测试代码覆盖率要求(%)，小于此值pipeline将会失败！')
     }
 
     stages {
@@ -23,6 +24,7 @@ pipeline {
 
         stage('Maven编译打包并单元测试') {
             steps {
+                // 注入jacoco插件配置,clean test执行单元测试代码. All tests should pass.
                 sh '''
                     . ~/.bash_profile 
                     
@@ -39,8 +41,10 @@ pipeline {
                     
                     cd ${WORKSPACE}
                     mvn sonar:sonar -Dsonar.projectKey=spring-boot-restful-api -Dsonar.host.url=http://60.205.228.49:9000/ -Dsonar.login=053ed1077e82a2bb36eebf619d24d75b8c5738b9 -Dsonar.branch.name=${branch}
-                    jacoco changeBuildStatus: true, maximumLineCoverage:"20"
                 '''
+                junit '**/target/surefire-reports/*.xml'
+                // 配置单元测试覆盖率要求，未达到要求pipeline将会fail,code coverage.LineCoverage>20%.
+                jacoco changeBuildStatus: true, maximumLineCoverage: "${lineCoverage}"
             }
         }
 
