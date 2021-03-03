@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.2.0" sequence="0" timestamp="1614677483000" analysisTimestamp="1614750540231" release="">
+  <Project>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/test-classes/com/spring/boot/demo/SpringBootDemoApplicationTest.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/test-classes/com/spring/boot/demo/BaseCase.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/classes/com/spring/boot/demo/SpringBootDemoApplication.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/test-classes/com/spring/boot/demo/controller/UserControllerTest.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/test-classes/com/spring/boot/demo/service/CalcServiceTest.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/classes/com/spring/boot/demo/entity/UserInfoEntity.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/classes/com/spring/boot/demo/entity/UserEntity.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/classes/com/spring/boot/demo/annotation/JwtSupport.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/classes/com/spring/boot/demo/advance/JwtAdvance.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/classes/com/spring/boot/demo/advance/ExceptionInterceptor.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/classes/com/spring/boot/demo/controller/UserInfoController.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/classes/com/spring/boot/demo/controller/UserController.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/classes/com/spring/boot/demo/controller/CalcController.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/classes/com/spring/boot/demo/filter/TraceIdFilter.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/classes/com/spring/boot/demo/service/UserInfoService.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/classes/com/spring/boot/demo/service/UserService.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/classes/com/spring/boot/demo/service/CalcService.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/test-classes/com/spring/boot/demo/service/impl/UserServiceImplTest.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/test-classes/com/spring/boot/demo/service/impl/UserInfoServiceImplTest.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/classes/com/spring/boot/demo/common/response/ApiCodeEnum.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/classes/com/spring/boot/demo/common/response/ApiResponse.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/classes/com/spring/boot/demo/common/config/SwaggerConfiguration.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/classes/com/spring/boot/demo/common/utils/JwtUtils.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/classes/com/spring/boot/demo/common/exception/CustomException.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/classes/com/spring/boot/demo/service/impl/UserServiceImpl.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/classes/com/spring/boot/demo/service/impl/CalcServiceImpl.class</Jar>
+    <Jar>/Users/apple/JavaProject/spring-boot-restful-api/target/classes/com/spring/boot/demo/service/impl/UserInfoServiceImpl.class</Jar>
+    <AuxClasspathEntry>/Users/apple/JavaProject/spring-boot-restful-api/target</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/apple/JavaProject/spring-boot-restful-api/.scannerwork/findbugs/annotations.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/apple/JavaProject/spring-boot-restful-api/.scannerwork/findbugs/jsr305.jar</AuxClasspathEntry>
+    <WrkDir>/Users/apple/JavaProject/spring-boot-restful-api/.scannerwork</WrkDir>
+  </Project>
+  <Errors errors="0" missingClasses="45">
+    <MissingClass>accept</MissingClass>
+    <MissingClass>apply</MissingClass>
+    <MissingClass>cn.hutool.core.lang.Assert</MissingClass>
+    <MissingClass>cn.hutool.core.util.StrUtil</MissingClass>
+    <MissingClass>com.auth0.jwt.JWT</MissingClass>
+    <MissingClass>com.auth0.jwt.JWTCreator$Builder</MissingClass>
+    <MissingClass>com.auth0.jwt.JWTVerifier</MissingClass>
+    <MissingClass>com.auth0.jwt.algorithms.Algorithm</MissingClass>
+    <MissingClass>com.auth0.jwt.exceptions.AlgorithmMismatchException</MissingClass>
+    <MissingClass>com.auth0.jwt.exceptions.SignatureVerificationException</MissingClass>
+    <MissingClass>com.auth0.jwt.exceptions.TokenExpiredException</MissingClass>
+    <MissingClass>com.auth0.jwt.interfaces.Verification</MissingClass>
+    <MissingClass>execute</MissingClass>
+    <MissingClass>get</MissingClass>
+    <MissingClass>javax.servlet.Filter</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>org.assertj.core.api.AbstractThrowableAssert</MissingClass>
+    <MissingClass>org.assertj.core.api.Assertions</MissingClass>
+    <MissingClass>org.junit.jupiter.api.Assertions</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.slf4j.MDC</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.test.web.servlet.MockMvc</MissingClass>
+    <MissingClass>org.springframework.test.web.servlet.MvcResult</MissingClass>
+    <MissingClass>org.springframework.test.web.servlet.ResultActions</MissingClass>
+    <MissingClass>org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder</MissingClass>
+    <MissingClass>org.springframework.test.web.servlet.request.MockMvcRequestBuilders</MissingClass>
+    <MissingClass>org.springframework.test.web.servlet.result.MockMvcResultHandlers</MissingClass>
+    <MissingClass>org.springframework.test.web.servlet.result.MockMvcResultMatchers</MissingClass>
+    <MissingClass>org.springframework.test.web.servlet.result.StatusResultMatchers</MissingClass>
+    <MissingClass>org.springframework.test.web.servlet.setup.DefaultMockMvcBuilder</MissingClass>
+    <MissingClass>org.springframework.test.web.servlet.setup.MockMvcBuilders</MissingClass>
+    <MissingClass>org.springframework.util.StringUtils</MissingClass>
+    <MissingClass>org.springframework.web.context.WebApplicationContext</MissingClass>
+    <MissingClass>springfox.documentation.builders.ApiInfoBuilder</MissingClass>
+    <MissingClass>springfox.documentation.builders.PathSelectors</MissingClass>
+    <MissingClass>springfox.documentation.builders.RequestHandlerSelectors</MissingClass>
+    <MissingClass>springfox.documentation.service.Contact</MissingClass>
+    <MissingClass>springfox.documentation.spi.DocumentationType</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.ApiSelectorBuilder</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.Docket</MissingClass>
+    <MissingClass>test</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 2 Mar 2021 17:31:23 +0800" total_classes="27" referenced_classes="94" total_bugs="0" total_size="512" num_packages="12" java_version="1.8.0_171" vm_version="25.171-b11" cpu_seconds="12.66" clock_seconds="2.95" peak_mbytes="335.20" alloc_mbytes="3641.00" gc_seconds="0.07">
+    <FileStats path="com/spring/boot/demo/BaseCase.java" bugCount="0" size="3"/>
+    <FileStats path="com/spring/boot/demo/SpringBootDemoApplication.java" bugCount="0" size="6"/>
+    <FileStats path="com/spring/boot/demo/SpringBootDemoApplicationTest.java" bugCount="0" size="3"/>
+    <FileStats path="com/spring/boot/demo/advance/ExceptionInterceptor.java" bugCount="0" size="15"/>
+    <FileStats path="com/spring/boot/demo/advance/JwtAdvance.java" bugCount="0" size="19"/>
+    <FileStats path="com/spring/boot/demo/annotation/JwtSupport.java" bugCount="0" size="1"/>
+    <FileStats path="com/spring/boot/demo/common/config/SwaggerConfiguration.java" bugCount="0" size="19"/>
+    <FileStats path="com/spring/boot/demo/common/exception/CustomException.java" bugCount="0" size="33"/>
+    <FileStats path="com/spring/boot/demo/common/response/ApiCodeEnum.java" bugCount="0" size="23"/>
+    <FileStats path="com/spring/boot/demo/common/response/ApiResponse.java" bugCount="0" size="42"/>
+    <FileStats path="com/spring/boot/demo/common/utils/JwtUtils.java" bugCount="0" size="14"/>
+    <FileStats path="com/spring/boot/demo/controller/CalcController.java" bugCount="0" size="17"/>
+    <FileStats path="com/spring/boot/demo/controller/UserController.java" bugCount="0" size="22"/>
+    <FileStats path="com/spring/boot/demo/controller/UserControllerTest.java" bugCount="0" size="18"/>
+    <FileStats path="com/spring/boot/demo/controller/UserInfoController.java" bugCount="0" size="27"/>
+    <FileStats path="com/spring/boot/demo/entity/UserEntity.java" bugCount="0" size="28"/>
+    <FileStats path="com/spring/boot/demo/entity/UserInfoEntity.java" bugCount="0" size="28"/>
+    <FileStats path="com/spring/boot/demo/filter/TraceIdFilter.java" bugCount="0" size="11"/>
+    <FileStats path="com/spring/boot/demo/service/CalcService.java" bugCount="0" size="5"/>
+    <FileStats path="com/spring/boot/demo/service/CalcServiceTest.java" bugCount="0" size="46"/>
+    <FileStats path="com/spring/boot/demo/service/UserInfoService.java" bugCount="0" size="7"/>
+    <FileStats path="com/spring/boot/demo/service/UserService.java" bugCount="0" size="2"/>
+    <FileStats path="com/spring/boot/demo/service/impl/CalcServiceImpl.java" bugCount="0" size="21"/>
+    <FileStats path="com/spring/boot/demo/service/impl/UserInfoServiceImpl.java" bugCount="0" size="35"/>
+    <FileStats path="com/spring/boot/demo/service/impl/UserInfoServiceImplTest.java" bugCount="0" size="46"/>
+    <FileStats path="com/spring/boot/demo/service/impl/UserServiceImpl.java" bugCount="0" size="10"/>
+    <FileStats path="com/spring/boot/demo/service/impl/UserServiceImplTest.java" bugCount="0" size="11"/>
+    <PackageStats package="com.spring.boot.demo" total_bugs="0" total_types="3" total_size="12">
+      <ClassStats class="com.spring.boot.demo.BaseCase" sourceFile="BaseCase.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.spring.boot.demo.SpringBootDemoApplication" sourceFile="SpringBootDemoApplication.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.spring.boot.demo.SpringBootDemoApplicationTest" sourceFile="SpringBootDemoApplicationTest.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.spring.boot.demo.advance" total_bugs="0" total_types="2" total_size="34">
+      <ClassStats class="com.spring.boot.demo.advance.ExceptionInterceptor" sourceFile="ExceptionInterceptor.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.spring.boot.demo.advance.JwtAdvance" sourceFile="JwtAdvance.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.spring.boot.demo.annotation" total_bugs="0" total_types="1" total_size="1">
+      <ClassStats class="com.spring.boot.demo.annotation.JwtSupport" sourceFile="JwtSupport.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.spring.boot.demo.common.config" total_bugs="0" total_types="1" total_size="19">
+      <ClassStats class="com.spring.boot.demo.common.config.SwaggerConfiguration" sourceFile="SwaggerConfiguration.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.spring.boot.demo.common.exception" total_bugs="0" total_types="1" total_size="33">
+      <ClassStats class="com.spring.boot.demo.common.exception.CustomException" sourceFile="CustomException.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.spring.boot.demo.common.response" total_bugs="0" total_types="2" total_size="65">
+      <ClassStats class="com.spring.boot.demo.common.response.ApiCodeEnum" sourceFile="ApiCodeEnum.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.spring.boot.demo.common.response.ApiResponse" sourceFile="ApiResponse.java" interface="false" size="42" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.spring.boot.demo.common.utils" total_bugs="0" total_types="1" total_size="14">
+      <ClassStats class="com.spring.boot.demo.common.utils.JwtUtils" sourceFile="JwtUtils.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.spring.boot.demo.controller" total_bugs="0" total_types="4" total_size="84">
+      <ClassStats class="com.spring.boot.demo.controller.CalcController" sourceFile="CalcController.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.spring.boot.demo.controller.UserController" sourceFile="UserController.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.spring.boot.demo.controller.UserControllerTest" sourceFile="UserControllerTest.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.spring.boot.demo.controller.UserInfoController" sourceFile="UserInfoController.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.spring.boot.demo.entity" total_bugs="0" total_types="2" total_size="56">
+      <ClassStats class="com.spring.boot.demo.entity.UserEntity" sourceFile="UserEntity.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.spring.boot.demo.entity.UserInfoEntity" sourceFile="UserInfoEntity.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.spring.boot.demo.filter" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="com.spring.boot.demo.filter.TraceIdFilter" sourceFile="TraceIdFilter.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.spring.boot.demo.service" total_bugs="0" total_types="4" total_size="60">
+      <ClassStats class="com.spring.boot.demo.service.CalcService" sourceFile="CalcService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.spring.boot.demo.service.CalcServiceTest" sourceFile="CalcServiceTest.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.spring.boot.demo.service.UserInfoService" sourceFile="UserInfoService.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.spring.boot.demo.service.UserService" sourceFile="UserService.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.spring.boot.demo.service.impl" total_bugs="0" total_types="5" total_size="123">
+      <ClassStats class="com.spring.boot.demo.service.impl.CalcServiceImpl" sourceFile="CalcServiceImpl.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.spring.boot.demo.service.impl.UserInfoServiceImpl" sourceFile="UserInfoServiceImpl.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.spring.boot.demo.service.impl.UserInfoServiceImplTest" sourceFile="UserInfoServiceImplTest.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.spring.boot.demo.service.impl.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.spring.boot.demo.service.impl.UserServiceImplTest" sourceFile="UserServiceImplTest.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="244" invocations="769" avgMicrosecondsPerInvocation="317" maxMicrosecondsPerInvocation="17098" standardDeviationMicrosecondsPerInvocation="817"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="155" invocations="778" avgMicrosecondsPerInvocation="199" maxMicrosecondsPerInvocation="2074" standardDeviationMicrosecondsPerInvocation="139"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="133" invocations="94" avgMicrosecondsPerInvocation="1421" maxMicrosecondsPerInvocation="31374" standardDeviationMicrosecondsPerInvocation="3927"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="96" invocations="356" avgMicrosecondsPerInvocation="271" maxMicrosecondsPerInvocation="4094" standardDeviationMicrosecondsPerInvocation="525"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="83" invocations="94" avgMicrosecondsPerInvocation="889" maxMicrosecondsPerInvocation="14188" standardDeviationMicrosecondsPerInvocation="1835"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="65" invocations="150" avgMicrosecondsPerInvocation="434" maxMicrosecondsPerInvocation="7177" standardDeviationMicrosecondsPerInvocation="863"/>
+      <ClassProfile name="com.h3xstream.findsecbugs.taintanalysis.TaintDataflowEngine" totalMilliseconds="63" invocations="150" avgMicrosecondsPerInvocation="421" maxMicrosecondsPerInvocation="11835" standardDeviationMicrosecondsPerInvocation="1076"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="57" invocations="150" avgMicrosecondsPerInvocation="383" maxMicrosecondsPerInvocation="5440" standardDeviationMicrosecondsPerInvocation="664"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="56" invocations="161" avgMicrosecondsPerInvocation="349" maxMicrosecondsPerInvocation="38498" standardDeviationMicrosecondsPerInvocation="3033"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="53" invocations="150" avgMicrosecondsPerInvocation="355" maxMicrosecondsPerInvocation="10592" standardDeviationMicrosecondsPerInvocation="932"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="52" invocations="161" avgMicrosecondsPerInvocation="326" maxMicrosecondsPerInvocation="15314" standardDeviationMicrosecondsPerInvocation="1215"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="48" invocations="150" avgMicrosecondsPerInvocation="324" maxMicrosecondsPerInvocation="12226" standardDeviationMicrosecondsPerInvocation="1047"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="43" invocations="204" avgMicrosecondsPerInvocation="214" maxMicrosecondsPerInvocation="18893" standardDeviationMicrosecondsPerInvocation="1358"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="42" invocations="634" avgMicrosecondsPerInvocation="67" maxMicrosecondsPerInvocation="1504" standardDeviationMicrosecondsPerInvocation="136"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="42" invocations="150" avgMicrosecondsPerInvocation="282" maxMicrosecondsPerInvocation="3669" standardDeviationMicrosecondsPerInvocation="444"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="38" invocations="94" avgMicrosecondsPerInvocation="414" maxMicrosecondsPerInvocation="9797" standardDeviationMicrosecondsPerInvocation="1163"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="30" invocations="94" avgMicrosecondsPerInvocation="320" maxMicrosecondsPerInvocation="6484" standardDeviationMicrosecondsPerInvocation="848"/>
+      <ClassProfile name="com.h3xstream.findsecbugs.xml.TransformerFactoryDetector" totalMilliseconds="28" invocations="27" avgMicrosecondsPerInvocation="1070" maxMicrosecondsPerInvocation="26674" standardDeviationMicrosecondsPerInvocation="5022"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="27" invocations="94" avgMicrosecondsPerInvocation="296" maxMicrosecondsPerInvocation="10659" standardDeviationMicrosecondsPerInvocation="1134"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="26" invocations="116" avgMicrosecondsPerInvocation="225" maxMicrosecondsPerInvocation="1269" standardDeviationMicrosecondsPerInvocation="251"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="25" invocations="94" avgMicrosecondsPerInvocation="274" maxMicrosecondsPerInvocation="10782" standardDeviationMicrosecondsPerInvocation="1264"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="23" invocations="94" avgMicrosecondsPerInvocation="253" maxMicrosecondsPerInvocation="8439" standardDeviationMicrosecondsPerInvocation="917"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="23" invocations="94" avgMicrosecondsPerInvocation="245" maxMicrosecondsPerInvocation="2770" standardDeviationMicrosecondsPerInvocation="460"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="22" invocations="94" avgMicrosecondsPerInvocation="234" maxMicrosecondsPerInvocation="2923" standardDeviationMicrosecondsPerInvocation="436"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="18" invocations="27" avgMicrosecondsPerInvocation="701" maxMicrosecondsPerInvocation="12782" standardDeviationMicrosecondsPerInvocation="2405"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="15" invocations="1711" avgMicrosecondsPerInvocation="9" maxMicrosecondsPerInvocation="1652" standardDeviationMicrosecondsPerInvocation="51"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="15" invocations="27" avgMicrosecondsPerInvocation="561" maxMicrosecondsPerInvocation="13382" standardDeviationMicrosecondsPerInvocation="2523"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="14" invocations="27" avgMicrosecondsPerInvocation="552" maxMicrosecondsPerInvocation="7046" standardDeviationMicrosecondsPerInvocation="1474"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="13" invocations="94" avgMicrosecondsPerInvocation="145" maxMicrosecondsPerInvocation="1912" standardDeviationMicrosecondsPerInvocation="316"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="13" invocations="27" avgMicrosecondsPerInvocation="498" maxMicrosecondsPerInvocation="7066" standardDeviationMicrosecondsPerInvocation="1318"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="12" invocations="94" avgMicrosecondsPerInvocation="135" maxMicrosecondsPerInvocation="1662" standardDeviationMicrosecondsPerInvocation="269"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="11" invocations="27" avgMicrosecondsPerInvocation="443" maxMicrosecondsPerInvocation="3568" standardDeviationMicrosecondsPerInvocation="757"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="11" invocations="150" avgMicrosecondsPerInvocation="78" maxMicrosecondsPerInvocation="1464" standardDeviationMicrosecondsPerInvocation="143"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="11" invocations="27" avgMicrosecondsPerInvocation="414" maxMicrosecondsPerInvocation="2387" standardDeviationMicrosecondsPerInvocation="533"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="11" invocations="150" avgMicrosecondsPerInvocation="74" maxMicrosecondsPerInvocation="2171" standardDeviationMicrosecondsPerInvocation="203"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

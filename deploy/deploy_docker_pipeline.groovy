@@ -18,7 +18,7 @@ pipeline {
     stages {
         stage('检出代码') {
             steps {
-                git credentialsId: cred_id, url: 'https://gitee.com/jeanlv/spring-boot-restful-api.git', branch: '${branch}'
+                git credentialsId: cred_id, url: 'https://gitee.com/jeanlv/spring-boot-restful-api.git', branch: "$params.branch"
             }
         }
 
@@ -44,9 +44,7 @@ pipeline {
                 '''
                 junit '**/target/surefire-reports/*.xml'
                 // 配置单元测试覆盖率要求，未达到要求pipeline将会fail,code coverage.LineCoverage>20%.
-                jacoco changeBuildStatus: true, maximumLineCoverage: "${lineCoverage}"
-                // Jacoco覆盖率报告
-                jacoco execPattern: '**/target/**.exec'
+                jacoco changeBuildStatus: true, maximumLineCoverage: "$params.lineCoverage"
             }
         }
 
@@ -88,7 +86,7 @@ pipeline {
         stage('启动新Docker实例') {
             steps {
                 sh '''
-                    docker run -d --name $docker_container_name -p 8988:8988 $docker_image_name
+                    docker run -d --name $docker_container_name -p 8988:8988 -p 6301:6301 /usr/local/jacoco/lib/jacocoagent.jar:/usr/local/jacocoagent.jar $docker_image_name
                 '''
             }
         }
