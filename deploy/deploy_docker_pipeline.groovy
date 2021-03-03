@@ -86,7 +86,7 @@ pipeline {
         stage('启动新Docker实例') {
             steps {
                 sh '''
-                    docker run -d --name $docker_container_name -p 8988:8988 $docker_image_name
+                    docker run -d --name $docker_container_name -p 8988:8988 -p 6301:6301 /usr/local/jacoco/lib/jacocoagent.jar:/usr/local/jacocoagent.jar $docker_image_name
                 '''
             }
         }
