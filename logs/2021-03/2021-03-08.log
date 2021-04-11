@@ -1,0 +1,2 @@
+2021-03-08 15:00:22.991 ERROR 39041 --- [http-nio-8988-exec-3] c.s.b.demo.advance.ExceptionInterceptor  : 捕捉业务类异常:CustomException(code=00001)
+2021-03-08 15:00:23.095 ERROR 39041 --- [http-nio-8988-exec-4] c.s.b.demo.advance.ExceptionInterceptor  : 捕捉业务类异常:CustomException(code=00001)

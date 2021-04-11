@@ -31,9 +31,9 @@ class CalcServiceTest extends BaseCase {
 
     @Test
     @DisplayName("计算加法异常执行传入的数字为null")
-    void addNumber() {
+    void addForAIsNull() {
         try {
-            Integer result = calcService.add(null, null);
+            calcService.add(null, null);
         } catch (IllegalArgumentException e) {
             // 注意：同时传null的时候，代码执行，第一行抛出了异常，就不会执行下一行了
             Assertions.assertThat(e).isInstanceOf(IllegalArgumentException.class).hasMessage("the argument a is required, it must be not null.");
@@ -42,9 +42,9 @@ class CalcServiceTest extends BaseCase {
 
     @Test
     @DisplayName("计算加法异常执行传入的加数B为null")
-    void addForB() {
+    void addForBIsNull() {
         try {
-            Integer result = calcService.add(a, null);
+            calcService.add(a, null);
         } catch (IllegalArgumentException e) {
             // 注意：同时传null的时候，代码执行，第一行抛出了异常，就不会执行下一行了
             Assertions.assertThat(e).isInstanceOf(IllegalArgumentException.class).hasMessage("the argument b is required, it must be not null.");
@@ -59,6 +59,28 @@ class CalcServiceTest extends BaseCase {
     }
 
     @Test
+    @DisplayName("计算减法异常执行传入的数字为null")
+    void subForAIsNull() {
+        try {
+            calcService.sub(null, null);
+        } catch (IllegalArgumentException e) {
+            // 注意：同时传null的时候，代码执行，第一行抛出了异常，就不会执行下一行了
+            Assertions.assertThat(e).isInstanceOf(IllegalArgumentException.class).hasMessage("the argument a is required, it must be not null.");
+        }
+    }
+
+    @Test
+    @DisplayName("计算减法异常执行传入的数字B为null")
+    void subForBIsNull() {
+        try {
+            calcService.sub(a, null);
+        } catch (IllegalArgumentException e) {
+            // 注意：同时传null的时候，代码执行，第一行抛出了异常，就不会执行下一行了
+            Assertions.assertThat(e).isInstanceOf(IllegalArgumentException.class).hasMessage("the argument b is required, it must be not null.");
+        }
+    }
+
+    @Test
     @DisplayName("计算乘法正确执行")
     void mul() {
         Integer result = calcService.mul(a, b);
@@ -66,10 +88,54 @@ class CalcServiceTest extends BaseCase {
     }
 
     @Test
+    @DisplayName("计算乘法异常执行传入的数字为null")
+    void mulForAIsNull() {
+        try {
+            calcService.mul(null, null);
+        } catch (IllegalArgumentException e) {
+            // 注意：同时传null的时候，代码执行，第一行抛出了异常，就不会执行下一行了
+            Assertions.assertThat(e).isInstanceOf(IllegalArgumentException.class).hasMessage("the argument a is required, it must be not null.");
+        }
+    }
+
+    @Test
+    @DisplayName("计算乘法异常执行传入的数字B为null")
+    void mulForBIsNull() {
+        try {
+            calcService.mul(a, null);
+        } catch (IllegalArgumentException e) {
+            // 注意：同时传null的时候，代码执行，第一行抛出了异常，就不会执行下一行了
+            Assertions.assertThat(e).isInstanceOf(IllegalArgumentException.class).hasMessage("the argument b is required, it must be not null.");
+        }
+    }
+
+    @Test
     @DisplayName("计算除法正确执行")
     void div() {
         Integer result = calcService.div(a, b);
         assertAll("div result", () -> assertEquals(2, result));
+    }
+
+    @Test
+    @DisplayName("计算除法法异常执行传入的数字为null")
+    void divForAIsNull() {
+        try {
+            calcService.div(null, null);
+        } catch (IllegalArgumentException e) {
+            // 注意：同时传null的时候，代码执行，第一行抛出了异常，就不会执行下一行了
+            Assertions.assertThat(e).isInstanceOf(IllegalArgumentException.class).hasMessage("the argument a is required, it must be not null.");
+        }
+    }
+
+    @Test
+    @DisplayName("计算除法异常执行传入的数字B为null")
+    void divForBIsNull() {
+        try {
+            calcService.div(a, null);
+        } catch (IllegalArgumentException e) {
+            // 注意：同时传null的时候，代码执行，第一行抛出了异常，就不会执行下一行了
+            Assertions.assertThat(e).isInstanceOf(IllegalArgumentException.class).hasMessage("the argument b is required, it must be not null.");
+        }
     }
 
     @Test
