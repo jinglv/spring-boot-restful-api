@@ -17,6 +17,9 @@ import java.util.Map;
 public class JwtUtils {
     private static final String SING = "!Q@W3e4r";
 
+    private JwtUtils() {
+    }
+
     /**
      * 生成token
      * header.payload.signature

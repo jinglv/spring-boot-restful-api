@@ -22,6 +22,9 @@ class UserInfoServiceImplTest extends BaseCase {
 
     @Test
     void findUser() {
+        UserInfoEntity userInfo = save();
+        UserInfoEntity user = userInfoService.findUser(userInfo.getUserId());
+        assertAll("result assertion", () -> assertEquals(user.getUserId(), 1));
     }
 
     @Test
