@@ -35,7 +35,7 @@ pipeline {
                     . ~/.bash_profile 
                     
                     cd ${WORKSPACE}
-                    mvn sonar:sonar -Dsonar.projectKey=spring-boot-restful-api -Dsonar.host.url=http://60.205.228.49:9000/ -Dsonar.login=3b853008a7990850a6371af08939ca01d0eb2ddc -Dsonar.branch.name=${branch}
+                    mvn sonar:sonar -Dsonar.projectKey=spring-boot-restful-api -Dsonar.host.url=http://60.205.228.49:9000/ -Dsonar.login=a77bcd06aa8294b55255e1416bc1edf5dd5d487a -Dsonar.branch.name=${branch}
                 '''
                 junit '**/target/surefire-reports/*.xml'
                 // 配置单元测试覆盖率要求，未达到要求pipeline将会fail,code coverage.LineCoverage>20%.
