@@ -3,7 +3,7 @@ pipeline {
         label 'master'
     }
     environment {
-        cred_id = '578d7669-6c7c-4010-8623-1e9cf0f88ff3'
+        cred_id = '62d9a573-7996-4e5b-b163-178fdcf4953f'
         docker_image_name = 'restful_api'
         docker_container_name = 'irestful_api'
     }
