@@ -97,7 +97,7 @@ pipeline {
         success {
             script {
                 println "Here we kickoff run job SpringBoot-Restful-Api-Test-Pipeline"
-                job_run_result = build job: 'SpringBoot-Restful-Api-Test-Pipeline', propagate: false, wait: true
+                job_run_result = build job: 'spring-boot-restful-api-test', propagate: false, wait: true
                 println job_run_result.getResult()
             }
         }
