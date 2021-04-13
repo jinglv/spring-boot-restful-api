@@ -8,7 +8,7 @@ pipeline {
         docker_container_name = 'irestful_api'
     }
     parameters {
-        string(name: 'branch', defaultValue: 'main', description: 'Git branch')
+        string(name: 'branch', defaultValue: 'master', description: 'Git branch')
         string(name: 'pomPath', defaultValue: 'pom.xml', description: 'pom.xml的相对路径')
         string(name: 'lineCoverage', defaultValue: '20', description: '单元测试代码覆盖率要求(%)，小于此值pipeline将会失败！')
     }
