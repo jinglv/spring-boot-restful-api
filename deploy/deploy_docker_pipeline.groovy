@@ -2,26 +2,22 @@ pipeline {
     agent {
         label 'master'
     }
-
     environment {
-        cred_id = 'b4d58207-0fa3-43f5-bf1d-c635025a7684'
+        cred_id = '578d7669-6c7c-4010-8623-1e9cf0f88ff3'
         docker_image_name = 'restful_api'
         docker_container_name = 'irestful_api'
     }
-
     parameters {
         string(name: 'branch', defaultValue: 'main', description: 'Git branch')
         string(name: 'pomPath', defaultValue: 'pom.xml', description: 'pom.xml的相对路径')
         string(name: 'lineCoverage', defaultValue: '20', description: '单元测试代码覆盖率要求(%)，小于此值pipeline将会失败！')
     }
-
     stages {
         stage('检出代码') {
             steps {
                 git credentialsId: cred_id, url: 'https://gitee.com/jeanlv/spring-boot-restful-api.git', branch: "$params.branch"
             }
         }
-
         stage('Maven编译打包并单元测试') {
             steps {
                 // 注入jacoco插件配置,clean test执行单元测试代码. All tests should pass.
@@ -33,7 +29,6 @@ pipeline {
                 '''
             }
         }
-
         stage('SonarQube代码质量扫描') {
             steps {
                 sh '''
@@ -47,7 +42,6 @@ pipeline {
                 jacoco changeBuildStatus: true, maximumLineCoverage: "$params.lineCoverage"
             }
         }
-
         stage('停止 / 删除 现有Docker Container/Image ') {
             steps {
                 script {
@@ -71,7 +65,6 @@ pipeline {
                 }
             }
         }
-
         stage('生成新的Docker Image') {
             steps {
                 sh '''
@@ -82,7 +75,6 @@ pipeline {
                 '''
             }
         }
-
         stage('启动新Docker实例') {
             steps {
                 sh '''
@@ -91,7 +83,6 @@ pipeline {
             }
         }
     }
-
     post {
         always {
             script {
